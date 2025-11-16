@@ -8,13 +8,15 @@ import re
 import io
 
 # Core LangChain imports
-from langchain.agents import create_react_agent, AgentExecutor
+from langchain.agents import AgentExecutor
+from langchain.agents.react.agent import create_react_agent  # CORRECT IMPORT PATH
 from langchain.memory import ConversationBufferMemory
 from langchain_community.tools import DuckDuckGoSearchResults
 from langchain.tools import Tool
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.schema import HumanMessage, AIMessage
 from langchain_openai import ChatOpenAI
+
 
 # Tool-specific imports
 import PyPDF2
