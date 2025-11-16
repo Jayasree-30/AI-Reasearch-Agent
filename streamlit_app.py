@@ -531,7 +531,6 @@ class CitationFormatterTool:
 
 def create_advanced_prompt():
     """Create an advanced prompt template with context engineering"""
-
     return ChatPromptTemplate.from_messages([
         ("system", """You are ARIA (Advanced Research Intelligence Assistant), a sophisticated AI research agent designed to provide comprehensive, accurate, and contextually aware assistance.
 
@@ -604,9 +603,10 @@ Automatically search when queries involve:
 - Suggest related research directions
 - Adapt depth and complexity to user needs
 
-Remember: You are not just answering questions—you are facilitating discovery, enabling deeper understanding, and empowering informed decision-making through intelligent research assistance.)
-                Available tools: {tools}
-        Tool names: {tool_names}""",
+Remember: You are not just answering questions—you are facilitating discovery, enabling deeper understanding, and empowering informed decision-making through intelligent research assistance.
+
+Available tools: {tools}
+Tool names: {tool_names}"""),
 
         MessagesPlaceholder(variable_name="chat_history"),
 
@@ -622,6 +622,7 @@ Please provide a comprehensive response following the intelligence protocols abo
 
         MessagesPlaceholder(variable_name="agent_scratchpad")
     ])
+
 
 def generate_intelligent_followups(query: str, response: str) -> List[str]:
     """Generate contextually relevant follow-up questions"""
