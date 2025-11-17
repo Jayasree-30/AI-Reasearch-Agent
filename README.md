@@ -33,7 +33,7 @@ Simply visit: [AI-Real-Time-Research-Agent.streamlit.app](https://ai-real-time-r
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/SREESAIARJUN/AI-Real-Time-Research-Agent.git
+git clone https://github.com/Jayasree-30/AI-Real-Time-Research-Agent.git
 cd ai-research-agent
 ```
 
